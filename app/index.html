@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="phonecatApp">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script> -->
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+<script src="app.module.js"></script>
+<script src="phone-list/phone-list.module.js"></script>
+<script src="phone-list/phone-list.component.js"></script>
+<script src="app.config.js"></script>
+<script src="phone-detail/phone-detail.module.js"></script>
+<script src="phone-detail/phone-detail.component.js"></script>
+<body>
+
+    <!-- Use a custom component to render a list of phones -->
+    <!-- <phone-list></phone-list> -->
+    <h2>AngularJS Demo</h2>
+    <br/>
+    <div ng-view></div>
+  
+  </body>
+</html>

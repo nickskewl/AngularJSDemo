@@ -1,0 +1,18 @@
+<div>
+    Search: <input ng-model="query" ng-change="$ctrl.onChange(query)"/>
+</div>
+
+<p>
+    Sort by:
+    <select ng-model="$ctrl.orderProp">
+      <option value="name">Alphabetical</option>
+      <option value="age">Newest</option>
+    </select>
+</p>
+<br/>
+<ul>
+    <li ng-repeat="phone in $ctrl.phones | filter:query | orderBy:$ctrl.orderProp">
+        <a href="#!/phones/{{phone.id}}">{{phone.name | uppercase}}</a>
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
