@@ -8,7 +8,14 @@ angular.
   function controller($routeParams, $http) {
     var self = this;
 
-        $http.get('phones/' + $routeParams.phoneId + '.json').then(function(response) {
+    $http({
+      method:"GET",
+      url: "phones/" + $routeParams.phoneId + ".json"
+    }).then(function(response){
+      self.phone = response.data;
+    });
+
+        /* $http.get('phones/' + $routeParams.phoneId + '.json').then(function(response) {
           self.phone = response.data;
-        });
+        }); */
   }

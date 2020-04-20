@@ -14,7 +14,12 @@ function controller($http) {
     console.log("changed: "+ val);
   };
 
-  $http.get('phones/phones.json').then(function(response) {
+  $http.get('phones/phones.json')
+  .then(function mySuccess(response) {
+    console.log(response.statusText);
     self.phones = response.data;
+  },
+  function myError(response) {
+    console.log(response);
   });
 }
